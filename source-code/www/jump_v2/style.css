@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+#gameArea {
+  position: relative;
+  width: 600px;
+  height: 200px;
+  border: 2px solid black;
+  overflow: hidden;
+  background-color: white;
+}
+
+#dino {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: grey;
+  bottom: 0;
+  left: 50px;
+}
+
+#cactus {
+  position: absolute;
+  width: 30px;
+  height: 60px;
+  background-color: green;
+  bottom: 0;
+  right: -30px;
+  animation: moveCactus 2s infinite linear;
+}
+
+@keyframes moveCactus {
+  0% {
+    right: -30px;
+  }
+  100% {
+    right: 600px;
+  }
+}
+
+#score {
+  margin-top: 20px;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+}
+
+.jump {
+  animation: jumpAnimation 0.5s;
+}
+
+@keyframes jumpAnimation {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 100px;
+  }
+  100% {
+    bottom: 0;
+  }
+}

@@ -1,1 +1,83 @@
-hello
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Selection Screen</title>
+    <style>
+      /* General body and container styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two buttons per row */
+        gap: 15px;
+        max-width: 400px;
+        width: 90%;
+      }
+
+      /* Styling for game buttons */
+      .game-btn {
+        padding: 20px;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .game-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Disabled game button styles */
+      .game-btn.disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+
+      /* Mobile responsive styling */
+      @media (max-width: 768px) {
+        .game-btn {
+          font-size: 18px;
+          padding: 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .game-btn {
+          font-size: 16px;
+          padding: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Active buttons -->
+      <button class="game-btn" onclick="window.location.href='jump_v2'">Game 1</button>
+      <button class="game-btn" onclick="window.location.href='flappy_bird'">Game 2</button>
+
+      <!-- Disabled buttons -->
+      <button class="game-btn disabled" disabled>Game 3</button>
+      <button class="game-btn disabled" disabled>Game 4</button>
+      <button class="game-btn disabled" disabled>Game 5</button>
+      <button class="game-btn disabled" disabled>Game 6</button>
+      <button class="game-btn disabled" disabled>Game 7</button>
+      <button class="game-btn disabled" disabled>Game 8</button>
+      <button class="game-btn disabled" disabled>Game 9</button>
+      <button class="game-btn disabled" disabled>Game 10</button>
+    </div>
+  </body>
+</html>
